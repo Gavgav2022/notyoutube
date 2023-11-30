@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ДЗ №14 - міні-проєкт "NotYouTube" ч.1</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="container">
+                    <div class="header__inner">
+                        <a class="logo" href="">
+                            <img src="images/logo.svg" width="150" alt="не ютуб">
+                        </a>
+                        <button type="button" class="btn-transparent hide js_search">Шукати за назвою</button>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="container">
+                    <div class="video-filters hide">
+                        <button type="button" class="filter-btn" data-filter="all">Усі</button>
+                        <button type="button" class="filter-btn" data-filter="most-views">Найбільше переглядів</button>
+                        <button type="button" class="filter-btn" data-filter="least-views">Найменше переглядів</button>
+                        <button type="button" class="filter-btn" data-filter="most-liked">Найбільше вподобали</button>
+                        <button type="button" class="filter-btn" data-filter="least-liked">Найменше вподобали</button>
+                        <button type="button" class="filter-btn" data-filter="longest">Найдовші</button>
+                        <button type="button" class="filter-btn" data-filter="shortest">Найкоротші</button>
+                        <button type="button" class="filter-btn" data-filter="newest">Новіші</button>
+                        <button type="button" class="filter-btn" data-filter="oldest">Старіші</button>
+                        <button type="button" class="filter-btn" data-filter="show-studio">Студії</button>
+                    </div>
+                    <div class="studio-list"></div>
+                    <button type="button" class="btn-transparent btn-centered js_show">Показати фільми</button>
+                    <div class="video-list"></div>
+                </div>
+            </main>
+        </div>
+        
+        <!-- Для повідомлення з помилкою пошуку -->
+        <div class="message-box">
+            <div class="message-box__head">
+                <button type="button" class="message-box__close">Х</button>
+            </div>
+            <div class="message-box__body"></div>
+        </div>
+        
+        <!-- Для відео, що відкривається після кліку на фільм -->
+        <div class="popup">
+            <div class="popup__head">
+                <button type="button" class="popup__close">Закрити</button>
+            </div>
+            <iframe
+                class="popup__video"
+                src=""
+                width="800"
+                height="450"
+                allowfullscreen
+            ></iframe>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
